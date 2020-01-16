@@ -1,19 +1,33 @@
-# Project Name
-Project description
+# GoToMeeting API Powershell functions
+This script contains functions related to the GoToMeeting API.  The functions are to help create scripts that need information from GoToMeeting.
+
+# Prerequisites
+* Powershell v5.1
+* <a href url="https://goto-developer.logmeininc.com/content/gotomeeting-api-reference">GoToMeeting API v2</a>
+
+# Instructions
+To use the functions in this module, you first need to import them into your script.
+
+Example:
+```
+Import-Module "C:\GoToMeetingModule.psm1" -Force
+```
+
+Functions:
+* <b>SMA_GTMLogin</b> - Authenticates your account initally with the API
+* <b>SMA_GTMLoginRefresh</b> - Refreshes your API credentials (must be done periodically as the tokens expire)
+* <b>SMA_GTMPersonalMeetings</b> - Returns information about your personal scheduled meetings
+* <b>SMA_GTMSetup</b> - Used in conjunction with the OpCon API to store your login tokens
+* <b>SMA_GTMStartMeeting</b> - Starts a new GoToMeeting session
+* <b>SMA_GTMUpcomingMeetings</b> - Returns information about upcoming scheduled meetings (could be shared with a group)
 
 # Disclaimer
 No Support and No Warranty are provided by SMA Technologies for this project and related material. The use of this project's files is on your own risk.
 
 SMA Technologies assumes no liability for damage caused by the usage of any of the files offered here via this Github repository.
 
-# Prerequisites
-
-
-# Instructions
-
-
 # License
-Copyright 2019 SMA Technologies
+Copyright 2020 SMA Technologies
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
